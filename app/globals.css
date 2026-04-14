@@ -1,26 +1,101 @@
 @import "tailwindcss";
+@plugin "daisyui";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* Brand Colors */
+  --color-primary-green: #22c55e;
+  --color-accent-green: #4ade80;
+  --color-accent-green-dark: #166534;
+  
+  /* Backgrounds */
+  --color-bg-primary: #0a0c10;
+  --color-bg-surface: #12141c;
+  --color-bg-surface-raised: #1a1d26;
+  --color-bg-surface-hover: #1e222d;
+  
+  /* Borders */
+  --color-border-subtle: #222631;
+  --color-border-accent: #333a4a;
+  
+  /* Text */
+  --color-text-primary: #f4f4f5;
+  --color-text-secondary: #a1a1aa;
+  --color-text-muted: #52525b;
+  
+  /* Priorities */
+  --color-priority-critical: #ef4444;
+  --color-priority-high: #f97316;
+  --color-priority-medium: #eab308;
+  --color-priority-low: #3b82f6;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Specifics */
+  --color-avatar-purple: #8b5cf6;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Animations */
+  --animate-slide-up: slide-up 0.5s ease-out;
+  --animate-fade-in: fade-in 0.4s ease-out;
+
+  @keyframes slide-up {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Base custom styles */
+@layer base {
+  :root {
+    --bg-primary: #0a0c10;
+    --bg-surface: #12141c;
+    --bg-surface-raised: #1a1d26;
+    --bg-surface-hover: #1e222d;
+    --border-subtle: #222631;
+    --border-accent: #333a4a;
+    --text-primary: #f4f4f5;
+    --text-secondary: #a1a1aa;
+    --text-muted: #52525b;
+    --accent-green: #4ade80;
+    --accent-green-dark: #166534;
+    --priority-critical: #ef4444;
+    --priority-high: #f97316;
+    --priority-medium: #eab308;
+    --priority-low: #3b82f6;
+    --avatar-purple: #8b5cf6;
+    --font-geist-sans: "Geist Sans", sans-serif;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-geist-sans);
+  }
+}
+
+/* Utilities */
+@layer utilities {
+  .top-accent-bar {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, var(--accent-green), transparent);
+    opacity: 0.5;
+  }
+
+  .green-glow {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(34, 197, 94, 0.08) 0%, transparent 70%);
+    filter: blur(60px);
+    z-index: -1;
+  }
+
+  .font-display {
+    font-family: 'UnifrakturMaguntia', serif;
+  }
 }
