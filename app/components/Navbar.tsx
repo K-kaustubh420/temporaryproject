@@ -20,12 +20,12 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-[var(--border-subtle)] bg-[var(--bg-primary)]/80 backdrop-blur-xl">
+    <nav className="sticky top-0 z-50 w-full border-b border-(--border-subtle)var(--bg-primary)]/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         {/* Brand */}
         <Link href="/dashboard" className="flex items-center gap-2.5 group">
           {logoSvg}
-          <span className="text-xl font-bold tracking-tight text-[var(--text-primary)] group-hover:text-[var(--accent-green)] transition-colors">
+          <span className="text-xl font-bold tracking-tight text-(--text-primary) group-hover:text-(--accent-green) transition-colors">
             Automailer
           </span>
         </Link>
@@ -40,8 +40,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`text-sm font-medium transition-colors ${
                   isActive
-                    ? "text-[var(--accent-green)]"
-                    : "text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
+                    ? "text-(--accent-green)"
+                    : "text-(--text-secondary) hover:text-(--text-primary)"
                 }`}
               >
                 {link.label}

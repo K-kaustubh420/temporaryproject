@@ -16,9 +16,9 @@ export default function TriagePanel({
   recommendation,
 }: TriagePanelProps) {
   return (
-    <div className="rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-6 animate-fade-in">
+    <div className="rounded-xl border border-(--border-subtle) bg-(--bg-surface) p-6 animate-fade-in">
       {/* Header */}
-      <h2 className="font-display text-2xl text-[var(--text-primary)] mb-6">
+      <h2 className="font-display text-2xl text-(--text-primary) mb-6">
         Triage Analysis
       </h2>
 
@@ -29,12 +29,12 @@ export default function TriagePanel({
 
       {/* Confidence */}
       <div className="mb-4">
-        <span className="text-sm text-[var(--text-secondary)]">Confidence: </span>
-        <span className="text-sm font-bold text-[var(--text-primary)]">{confidence}%</span>
+        <span className="text-sm text-(--text-secondary)">Confidence: </span>
+        <span className="text-sm font-bold text-(--text-primary)">{confidence}%</span>
       </div>
 
       {/* Confidence Bar */}
-      <div className="w-full h-1.5 bg-[var(--bg-surface-raised)] rounded-full mb-5 overflow-hidden">
+      <div className="w-full h-1.5 bg-(--bg-surface-raised) rounded-full mb-5 overflow-hidden">
         <div
           className="h-full rounded-full transition-all duration-700"
           style={{
@@ -50,8 +50,8 @@ export default function TriagePanel({
       </div>
 
       {/* Category */}
-      <p className="text-sm text-[var(--text-secondary)] mb-6">
-        Category: <span className="text-[var(--text-primary)] font-medium">{category}</span>
+      <p className="text-sm text-(--text-secondary) mb-6">
+        Category: <span className="text-(--text-primary) font-medium">{category}</span>
       </p>
 
       {/* Auto-generated Summary Card */}

@@ -11,12 +11,12 @@ const logoSvg = (
 
 export default function AuthNavbar() {
   return (
-    <nav className="w-full border-b border-[var(--border-subtle)] bg-[var(--bg-primary)]/80 backdrop-blur-xl">
+    <nav className="w-full border-b border-(--border-subtle) bg-(--bg-primary)/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         {/* Brand */}
         <Link href="/" className="flex items-center gap-2.5">
           {logoSvg}
-          <span className="text-xl font-bold tracking-tight text-[var(--text-primary)]">
+          <span className="text-xl font-bold tracking-tight text-(--text-primary)">
             Automailer
           </span>
         </Link>
@@ -25,13 +25,13 @@ export default function AuthNavbar() {
         <div className="flex items-center gap-3">
           <Link
             href="/login"
-            className="px-4 py-2 text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
+            className="px-4 py-2 text-sm font-medium text-(--text-secondary) hover:text-(--text-primary) transition-colors"
           >
             Sign In
           </Link>
           <Link
             href="/login"
-            className="px-4 py-2 text-sm font-medium rounded-lg border border-[var(--border-subtle)] text-[var(--text-primary)] hover:bg-[var(--bg-surface-hover)] transition-colors"
+            className="px-4 py-2 text-sm font-medium rounded-lg border border-(--border-subtle)-[var(--text-primary)] hover:bg-(--bg-surface-hover) transition-colors"
           >
             Get Started
           </Link>

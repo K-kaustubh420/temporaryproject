@@ -28,7 +28,7 @@ export default function PriorityCard({ count, label, priority }: PriorityCardPro
 
   return (
     <div
-      className={`flex items-center gap-4 rounded-xl border bg-[var(--bg-surface)] px-5 py-4 transition-all hover:bg-[var(--bg-surface-raised)] hover:border-[var(--border-accent)] ${colors.border}`}
+      className={`flex items-center gap-4 rounded-xl border bg-(--bg-surface) px-5 py-4 transition-all hover:bg-(--bg-surface-raised) hover:border-(--border-accent) ${colors.border}`}
       style={{ minWidth: 160 }}
     >
       <span
@@ -36,7 +36,7 @@ export default function PriorityCard({ count, label, priority }: PriorityCardPro
       >
         {count}
       </span>
-      <span className="text-base font-medium text-[var(--text-primary)]">
+      <span className="text-base font-medium text-(--text-primary)">
         {label}
       </span>
     </div>
